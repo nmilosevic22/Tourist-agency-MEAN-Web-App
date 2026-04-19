@@ -1,0 +1,12 @@
+<div class="header text-center">
+    <h2>ADMIN LOGIN</h2>
+</div>
+
+<div class="form-container text-center">
+    Username: <input class="form-control" type="text" [(ngModel)]="username"> <br>
+    Password: <input class="form-control" type="password" [(ngModel)]="password"> <br>
+    <button class="btn btn-primary rounded-pill shadow" (click)="login()">Log in</button>
+</div>
+
+
+<p class="message"> {{this.message}} </p>

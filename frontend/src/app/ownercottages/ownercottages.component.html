@@ -1,0 +1,53 @@
+<h1 class="text-center fw-bold">{{ this.user.username }}'s Cottages</h1>
+
+
+<div class="content" *ngIf="this.newCotForm == false">
+  <div *ngFor="let c of myCot">
+
+  <div *ngIf="c._id != this.editingCot">
+
+    {{ c.name }} <br />
+    {{ c.location }} <br />
+    {{ c.price }}$ PER NIGHT <br />
+    <button class="btn btn-info rounded-pill" (click)="toEdit(c._id, c.price, c.name, c.location)">EDIT</button> 
+    <button class="btn btn-info rounded-pill" (click)="toDelete(c._id)">DELETE</button>
+    <hr />
+
+  </div>
+
+  <div *ngIf="c._id == this.editingCot">
+
+    {{ c.name }} <input type="text" placeholder="Edit cottage name" [(ngModel)]="editName"> <br>
+    {{ c.location }} <input type="text" placeholder="Edit cottage location" [(ngModel)]="editLocation"> <br>
+    {{ c.price }}$ <input type="number" placeholder="Edit cottage price" [(ngModel)]="editPrice"> <br>
+
+    <button class="btn btn-light rounded-pill shadow" (click)="cancelEdit()">CANCEL</button> 
+
+    Add image<input type="file" (change)="onImage($event)"> <br>
+
+    <button class="btn btn-light rounded-pill shadow" (click)="toUpdate(c._id)">UPDATE</button>
+
+  </div>
+
+</div>
+
+<button class="btn btn-light btn-lg rounded-pill w-25 mx-auto d-block" (click)="addNew()">ADD NEW COTTAGE</button>
+
+</div>
+
+<div class="content" *ngIf="this.newCotForm == true">
+
+  <h3>NEW COTTAGE DETAILS:</h3>
+
+  Cottage name: <input class="form-control w-25" type="text" [(ngModel)]="newName"> <br>
+  Cottage location: <input class="form-control w-25" type="text" [(ngModel)]="newLocation"> <br>
+  Cottage price: <input class="form-control w-25" type="text" [(ngModel)]="newPrice"> <br>
+  Cottage images: <input class="form-control w-25" type="file" multiple (change)="onImages($event)"> <br> <br>
+
+  <button class="btn btn-info btn-lg rounded-pill w-25" (click)="createCotttage(this.user.username, this.newName, this.newLocation,
+    this.newPrice, this.newImages)"> CREATE </button> <br>
+
+  <button class="btn btn-info btn-lg rounded-pill w-25" (click)="cancelNew()">CANCEL</button>
+</div>
+
+<button class="btn btn-link text-light fs-5" (click)="back()">Back</button>

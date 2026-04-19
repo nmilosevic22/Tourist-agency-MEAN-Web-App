@@ -1,0 +1,28 @@
+.container {
+    display : grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0%;
+    gap: 10px;
+} 
+
+.left, .right {
+    width: 45%;
+    padding: 10px;
+}
+
+.msg {
+    color: red;
+}
+
+:host {
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    background-image: url('/..//public/adminbckg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 2vh;
+    padding-left: 2vh;
+
+}

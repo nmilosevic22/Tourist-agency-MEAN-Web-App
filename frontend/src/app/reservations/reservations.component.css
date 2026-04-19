@@ -1,0 +1,9 @@
+:host {
+    min-height: 100vh;
+    display:block;
+    background-image: url('/..//public/touristbckg.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    padding-left: 5vh;
+}

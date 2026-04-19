@@ -1,0 +1,28 @@
+.gallery {
+  display: flex;      
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 300px;        
+  height: 200px;       
+  object-fit: cover;   
+}
+
+:host {
+    min-height: 100vh;
+    display:block;
+    background-image: url('/..//public/touristbckg.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5vh;
+    padding-top: 5vh;
+}

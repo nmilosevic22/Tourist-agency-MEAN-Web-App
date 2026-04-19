@@ -1,0 +1,50 @@
+<h2 class="fw-bold">Please fill out registration form</h2> <br>
+
+Username : <input class="form-control w-25" type="text" [(ngModel)]="username"> <br>
+
+Password : <input class="form-control w-25" type="password" [(ngModel)]="password" (ngModelChange)="checkPassword()"> 
+<span *ngIf="passwordValid === true" style="color: green;">
+    Password is correct.
+</span>
+<span *ngIf="passwordValid === false" style="color: red;">
+    Password isn't correct.
+</span>
+<br>
+
+First name : <input class="form-control w-25" type="text" [(ngModel)]="firstname"> <br>
+Last name : <input class="form-control w-25" type="text" [(ngModel)]="lastname"> <br>
+
+<div>
+    Gender: M <input type="radio" name="r1" value="M" [(ngModel)]="gender"> 
+        F <input type="radio" name="r1" value="F" [(ngModel)]="gender"> <br>
+</div> <br>
+
+<div>
+        tourist <input type="radio" name="type" value="tourist" [(ngModel)]="type"> 
+        owner <input type="radio" name="type" value="owner" [(ngModel)]="type"> <br>
+</div> <br>
+
+Address : <input class="form-control w-25" type="text" [(ngModel)]="address"> <br>
+Contact : <input class="form-control w-25" type="text" [(ngModel)]="contact" (ngModelChange)="checkPhone()"> <br>
+
+<span *ngIf="contactValid === true" style="color: green;">
+    Valid number.
+</span>
+<span *ngIf="contactValid === false" style="color: red;">
+    Invalid number
+</span>
+
+Email : <input class="form-control w-25" type="text" [(ngModel)]="email"> <br>
+Card information : <input class="form-control w-25" type="text" [(ngModel)]="card" (ngModelChange)="checkCard()">
+<img *ngIf="dinersValid === true" src="diners.png" width="50" height="50">
+<img *ngIf="masterValid === true" src="master.png" width="50" height="50">
+<img *ngIf="visaValid === true" src="visa.png" width="50" height="50"> <br> 
+
+Profile picture: <input class="form-control w-25" type="file" (change)="onImage($event)"> <br>
+<button class="btn btn-light btn-lg rounded-pill shadow" type="submit" (click)="sendData()">Register</button>
+
+<hr>
+
+<span *ngIf="invalidForm === true" style="color: red;">
+    {{this.message}}
+</span>

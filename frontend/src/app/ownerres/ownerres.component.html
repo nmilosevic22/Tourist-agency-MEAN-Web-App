@@ -1,0 +1,17 @@
+<h1 class="text-center">MY RESERVATIONS</h1>
+
+<div *ngFor="let res of this.myRes">
+
+    TOURIST : {{res.tourist}} <br>
+    TOTAL PRICE : {{res.price}}$ <br>
+    NUMBER OF PEOPLE : {{res.people}} <br>
+    DATE BOOKED : from {{res.start | date:'dd-MM-yyyy' : 'UTC'}} to {{res.end | date:'dd-MM-yyyy' : 'UTC'}} <br>
+
+    AT {{res.name}}, {{res.location}} <br> <br>
+
+    <button class="btn btn-info rounded-pill" (click)="approve(res._id)">APPROVE</button> 
+    <button class="btn btn-info rounded-pill" (click)="reject(res._id)">REJECT</button> <br> <hr>
+
+</div>
+
+<button class="btn btn-link text-light fs-5" (click)="back()">Back</button>

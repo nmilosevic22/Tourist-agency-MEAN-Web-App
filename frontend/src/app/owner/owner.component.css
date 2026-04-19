@@ -1,0 +1,22 @@
+img {
+    height: 50;
+    width: 50;
+}
+
+:host {
+    min-height: 100vh;
+    display:block;
+    background-image: url('/..//public/ownerbckg.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    padding-left: 5vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+}

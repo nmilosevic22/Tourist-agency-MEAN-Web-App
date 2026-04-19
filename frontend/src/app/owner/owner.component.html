@@ -1,0 +1,43 @@
+<nav class="bg-info p-1 shadow rounded" style="width: 100%;">
+    <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item me-5"><a routerLink="/owner">Profile</a></li>
+        <li class="nav-item me-5"><a routerLink="/ownerres">Reservations</a></li>
+        <li class="nav-item me-5"><a routerLink="/ownerCottages">My cottages</a></li>
+    </ul>
+</nav>
+<hr>
+
+<div class="content fs-5" *ngIf="!edit"> 
+    First name: {{user.firstname}} <br>
+    Last name: {{user.lastname}} <br>
+    Address: {{user.address}} <br>
+    Email: {{user.email}} <br>
+    Contact: {{user.contact}} <br>
+    <img class="pt-3" [src]="'http://localhost:4000/uploads/' + user.image" width="150" height="150"> <br>
+
+    <button class="btn btn-secondary rounded-pill shadow p-3" (click)="editBtn()">Edit</button> <hr>
+
+    <footer>
+        <app-logoutuser></app-logoutuser>
+    </footer>
+</div>
+
+<div class="content" *ngIf="edit">
+    First name : <input class="form-control w-25" type="text" [(ngModel)]="firstname" placeholder="{{this.user.firstname}}"> <br>
+
+    Last name : <input class="form-control w-25" type="text" [(ngModel)]="lastname" placeholder="{{this.user.lastname}}"> <br>
+
+    Address : <input class="form-control w-25" type="text" [(ngModel)]="address" placeholder="{{this.user.address}}"> <br>
+
+    Email : <input class="form-control w-25" type="text" [(ngModel)]="email" placeholder="{{this.user.email}}"> <br>
+
+    Contact : <input class="form-control w-25" type="text" [(ngModel)]="contact" placeholder="{{this.user.contact}}"> <br>
+
+    Card : <input class="form-control w-25" type="text" [(ngModel)]="card" placeholder="{{this.user.card}}"> <br>
+
+    Image : <input class="form-control w-25" type="file" (change)="onFileSelected($event)">  <br>
+
+    <button class="btn btn-info shadow rounded-pill" (click)="saveData()">UPDATE</button>
+
+    <button class="btn btn-info shadow rounded-pill" (click)=editBtn()>Reset</button>
+</div>

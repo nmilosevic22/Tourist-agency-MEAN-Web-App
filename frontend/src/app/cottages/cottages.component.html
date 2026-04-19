@@ -1,0 +1,26 @@
+<h1 class="text-center fw-bold">Cottages</h1> <hr>
+
+<div class="content">
+    <div *ngFor="let c of searched">
+        <a (click)="cottageDetails(c.name)" routerLink="/detail">{{c.name}}</a> <br>
+        Price: {{c.price}}$, Owner: {{c.owner}}<br>
+        Location: {{c.location}} <br>
+        <hr>
+    </div>
+
+    <h3>Search cottage</h3>
+
+    <input class="form-control w-25" type="text" placeholder="Insert cottage name" [(ngModel)]="searchName"> <br>
+    <input class="form-control w-25" type="text" placeholder="Insert cottage location" [(ngModel)]="searchLocation"> <br>
+    <button class="btn btn-lg btn-primary rounded-pill shadow w-25" (click)="searchCottage()">Search</button>
+    <br> <hr>
+
+    <button class="btn btn-lg btn-primary rounded-pill shadow w-25" (click)="reset()">Reset</button> <hr>
+
+    <div>
+        <button class="btn btn-lg btn-primary rounded-pill shadow w-25" (click)="sortByName()">Sort by name</button>
+        <button class="btn btn-lg btn-primary rounded-pill shadow w-25" (click)="sortByLocation()">Sort by location</button> <br>
+
+        <button class="btn btn-link fs-4" (click)="back()">Back</button>
+    </div>
+</div>

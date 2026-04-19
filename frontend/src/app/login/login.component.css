@@ -1,0 +1,28 @@
+:host {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/..//public/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+}
+
+.form-container{
+    margin-top: 180px;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.header {
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.msg{
+    color: red;
+}

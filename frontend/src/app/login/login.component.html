@@ -1,0 +1,22 @@
+<div class="header text-center">
+    <h2>LOGIN PAGE</h2>
+</div>
+
+<div class="form-container text-center">
+
+    Username: <input class="form-control" type="text" [(ngModel)]="username"> <br>
+    Password: <input class="form-control" type="password" [(ngModel)]="password"> <br> <br>
+    <button class="btn btn-primary rounded-pill shadow" (click)="login()">Login</button> <br>
+
+    <p class="msg">{{this.message}}</p>
+
+    <a routerLink="/change">Change password</a>
+
+    <hr>
+
+    <a routerLink="/register">Don't have an account? Register here.</a>
+</div>
+
+
+
+

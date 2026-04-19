@@ -1,0 +1,46 @@
+<nav class="bg-info p-1 shadow rounded" style="width: 100vw; ">
+    <ul class="nav nav-pills justify-content-center">
+        <li class="nav-item me-5"><a class="nav-link active fw-bold text-decoration-none" routerLink="/tourist">Profile</a></li>
+        <li class="nav-item me-5"><a class="nav-link active fw-bold text-decoration-none" routerLink="/cottages">Cottages</a></li>
+        <li class="nav-item me-5"><a class="nav-link active fw-bold text-decoration-none" routerLink="/reservations">Reservations</a></li>
+    </ul>
+</nav>
+
+<div class="content">
+    <div *ngIf="!edit">
+        First name : {{info.firstname}} <br>
+        Last name : {{info.lastname}} <br>
+        Address : {{info.address}} <br>
+        Email : {{info.email}} <br>
+        Contact : {{info.contact}} <br>
+        Card : {{info.card}} <br>
+        <img [src]="'http://localhost:4000/uploads/' + info.image" width="300" height="300">
+    </div>
+
+    <div *ngIf="edit">
+        First name : <input class="form-control" type="text" [(ngModel)]="firstname" placeholder="{{this.info.firstname}}"> <br>
+
+        Last name : <input class="form-control" type="text" [(ngModel)]="lastname" placeholder="{{this.info.lastname}}"> <br>
+
+        Address : <input class="form-control" type="text" [(ngModel)]="address" placeholder="{{this.info.address}}"> <br>
+
+        Email : <input class="form-control" type="text" [(ngModel)]="email" placeholder="{{this.info.email}}"> <br>
+
+        Contact : <input class="form-control" type="text" [(ngModel)]="contact" placeholder="{{this.info.contact}}"> <br>
+
+        Card : <input class="form-control" type="text" [(ngModel)]="card" placeholder="{{this.info.card}}"> <br>
+
+        Image : <input type="file" [(ngModel)]="image" (change)="onFileSelected($event)">  <br> <br>
+
+        <button class="btn btn-primary shadow rounded-pill" (click)="saveData()">Save new data</button>
+    </div>
+
+    <button class="btn btn-secondary rounded-pill shadow p-3" (click)="editBttn()">{{edit ? 'Cancel' : 'Edit credentials'}}</button> <br>
+
+    <footer>
+        <app-logoutuser></app-logoutuser>
+    </footer>
+    
+</div>
+
+

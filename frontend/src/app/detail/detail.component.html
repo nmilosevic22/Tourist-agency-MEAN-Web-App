@@ -1,0 +1,80 @@
+<h1 class="text-center fw-bold fst-italic">{{cottage.name}}</h1> <hr>
+
+
+<div class="content" *ngIf="form == false">
+    <div class="fs-3">
+        Price per night : {{cottage.price}}$ <br>
+        Location : {{cottage.location}} <br>
+        Contact : {{this.cottageOwner.contact}} <br> <hr>
+    </div>
+
+
+    <div class="gallery">
+        <img *ngFor="let photo of cottage.images"
+        [src]="'http://localhost:4000/gallery/' + photo"
+        >   
+    </div> <br>
+
+    <button class="btn btn-lg btn-primary rounded-pill" (click)="backToCottages()">BACK</button>
+    <button class="btn btn-lg btn-primary rounded-pill" (click)="book()">BOOK</button>
+</div>
+
+<div class="content" *ngIf="form == true">
+    <h4 class="fs-3">Booking Form</h4> <br>
+
+    <div *ngIf="step == 1">
+        <mat-form-field> 
+            <mat-label>Izaberi pocetni datum</mat-label>
+            <input matInput [matDatepicker]="picker1" [(ngModel)]="startDate" [min]="today">
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+        </mat-form-field> <br>
+
+        <mat-form-field> 
+            <mat-label>Izaberi krajnji datum</mat-label>
+            <input matInput [matDatepicker]="picker2" [(ngModel)]="endDate" [min]="startDate">
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field> <br>
+
+        Number of adults: <input class="form-control" type="number" [(ngModel)]="adults" placeholder="Insert number of adults"> <br>
+        Number of children: <input class="form-control" type="number" [(ngModel)]="children" placeholder="Insert number of children"> <br>
+
+        <button class="btn btn-lg btn-light rounded-pill" (click)="back()">Back</button>
+        <button class="btn btn-lg btn-light rounded-pill" (click)="next()">Next</button> {{this.message}}
+        <p style="color: red;">{{message}}</p>
+    </div> <br>
+
+    <div class="fst-italic" *ngIf="step == 2">
+        <strong>
+            Cottage name: {{cottage.name}} <br>
+            Start of your reservation: {{startDate | date:'dd-MM-yyyy'}} <br>
+            End of your reservation: {{endDate | date:'dd-MM-yyyy'}} <br>
+        </strong>
+
+        <div>
+            Place your card here: <input class="form-control" type="text" [(ngModel)]="user.card" (ngModelChange)="checkCard()">
+            <img *ngIf="dinersValid === true" src="diners.png" width="50" height="50">
+            <img *ngIf="masterValid === true" src="master.png" width="50" height="50">
+            <img *ngIf="visaValid === true" src="visa.png" width="50" height="50"> <br>      
+        </div>
+
+        Number of nights: {{nights}} <br>
+        <hr>
+
+        TOTAL PRICE: {{totalPrice}}$ <hr>
+
+        <textarea class="form-control" rows="4" cols="40" maxlength="500" placeholder="Insert your additional requests here" 
+        [(ngModel)]="description"></textarea> <br>
+
+        <button class="btn btn-lg btn-light rounded-pill" (click)="back()">Back</button>
+        <button class="btn btn-lg btn-light rounded-pill" (click)="finish()">FINISH BOOKING</button>
+        <p style="color: red;">{{message}}</p>
+
+        <p>
+            Check in avaliable at <strong>14:00h</strong>
+        </p>
+    </div>
+    
+
+</div>

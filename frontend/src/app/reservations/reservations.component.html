@@ -1,0 +1,11 @@
+<h2 class="fw-bold pt-3">ACTIVE RESERVATIONS</h2>
+
+<div class="pt-3" *ngFor="let r of myRes">
+    Cottage: {{r.name}} <br>
+    Location: {{r.location}} <br>
+    {{r.start | date :'dd-MM-yyyy'}} - {{r.end | date :'dd-MM-yyyy'}} <br>
+    Adults : {{r.people}} <br>
+    TOTAL PRICE: {{r.price}}$ <hr>
+</div>
+
+<button class="btn btn-primary btn-lg rounded-pill" (click)="back()">Back</button>

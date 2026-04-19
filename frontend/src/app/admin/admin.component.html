@@ -1,0 +1,131 @@
+<h1 class="text-center fw-bold fst-italic text-light" *ngIf="this.newUserForm == false && this.toEdit == '' && this.toReq == false ">
+    ALL USERS
+</h1> <br>
+
+<div class="container" *ngIf="this.newUserForm == false && this.toEdit == '' && this.toReq == false">
+
+    <div class="left">
+        <p class="fst-italic fs-3 text-light">All owners</p> <hr>
+        <div class="text-light" *ngFor="let owner of this.allOwners">
+            Username: {{owner.username}} <br>
+            First name: {{owner.firstname}} <br>
+            Last name: {{owner.lastname}} <br><br>
+
+            <p *ngIf="owner.valid" style="color: wheat;">ACTIVE</p>
+            <p *ngIf="!owner.valid" style="color: red;">DEACTIVATED</p>
+
+            <button class="btn btn-light rounded-pill shadow" (click)="edit(owner.username)">EDIT</button>
+            <button class="btn btn-light rounded-pill shadow" (click)="delete(owner.username)">DELETE</button>
+            <button class="btn btn-light rounded-pill shadow" (click)="deactivate(owner.username)">DEACTIVATE</button>
+            <hr>
+        </div>
+    </div>
+
+    <div class="right">
+        <p class="fst-italic fs-3 text-light">All tourists</p> <hr>
+        <div class="text-light" *ngFor="let tourist of this.allTourists">
+            Username: {{tourist.username}} <br>
+            First name: {{tourist.firstname}} <br>
+            Last name: {{tourist.lastname}} <br><br>
+
+            <p *ngIf="tourist.valid" style="color: wheat;">ACTIVE</p>
+            <p *ngIf="!tourist.valid" style="color: red;">DEACTIVATED</p>
+            
+            <button class="btn btn-light rounded-pill shadow"  (click)="edit(tourist.username)">EDIT</button>
+            <button class="btn btn-light rounded-pill shadow"  (click)="delete(tourist.username)">DELETE</button>
+            <button class="btn btn-light rounded-pill shadow"  (click)="deactivate(tourist.username)">DEACTIVATE</button>
+            <hr>
+        </div>
+    </div>
+
+</div>
+
+<hr>
+<button class="btn btn-info rounded-pill shadow w-25 d-block mx-auto" 
+*ngIf="this.newUserForm == false && this.toEdit == '' && this.toReq == false" (click)="add()">
+    ADD NEW USER</button>
+
+<button class="btn btn-info rounded-pill shadow w-25 d-block mx-auto" 
+*ngIf="this.newUserForm == false && this.toEdit == '' && this.toReq == false" (click)="check()">
+    CHECK REQUESTS</button> <br> <br>
+
+<div *ngIf="this.newUserForm == true">
+
+    <h1 class="fw-bold fst-italic">New User Information</h1> <br>
+
+    Username: <input class="form-control w-25" type="text" [(ngModel)]="newUsername"> <br>
+    Password: <input class="form-control w-25" type="password" [(ngModel)]="newPassword" (ngModelChange)="checkPassword()">
+
+    <span *ngIf="newPassValid === true" style="color: green;">
+        Password is correct.
+    </span>
+    <span *ngIf="newPassValid === false" style="color: red;">
+        Password isn't correct.
+    </span> <br>
+
+    Firstname: <input class="form-control w-25" type="text" [(ngModel)]="newFirstname"> <br>
+    Lastname: <input class="form-control w-25" type="text" [(ngModel)]="newLastname"> <br>
+    Gender: M<input type="radio" name="r1" value="M" [(ngModel)]="newGender">
+            F <input type="radio" name="r1" value="F" [(ngModel)]="newGender"> <br> <br>
+    Type: owner <input type="radio" name="r2" value="owner" [(ngModel)]="newType">
+            tourist <input type="radio" name="r2" value="tourist" [(ngModel)]="newType"> <br> <br>
+    Address: <input class="form-control w-25" type="text" [(ngModel)]="newAddress"> <br>
+    Contact: <input class="form-control w-25" type="text" [(ngModel)]="newContact"> <br>
+    Email: <input class="form-control w-25" type="text" [(ngModel)]="newEmail"> <br>
+    Profile picture: <input class="form-control w-25" type="file" (change)="selectedFile($event)"> <br>
+    Card: <input class="form-control w-25" type="text" [(ngModel)]="newCard"> <br>
+
+    <button class="btn btn-info btn-lg rounded-pill shadow" (click)="back()">BACK</button>
+    <button class="btn btn-info btn-lg rounded-pill shadow" (click)="create()"> CREATE NEW USER </button>
+
+    <p class="fw-bold " style="color: red;">{{this.message}}</p> <br>   
+
+</div>
+
+<div *ngIf="this.toEdit != '' ">
+
+    Username: <input class="form-control w-25" type="text" [(ngModel)]="editUsername"> <br>
+    Password: <input class="form-control w-25"  type="password" [(ngModel)]="editPassword"> <br>
+    Firstname: <input class="form-control w-25"  type="text" [(ngModel)]="editFirstname"> <br>
+    Lastname: <input class="form-control w-25"  type="text" [(ngModel)]="editLastname"> <br>
+    Gender: M<input type="radio" name="r1" value="M" [(ngModel)]="editGender">
+            F <input type="radio" name="r1" value="F" [(ngModel)]="editGender"> <br> <br>
+    Type: owner <input type="radio" name="r2" value="owner" [(ngModel)]="editType">
+            tourist <input type="radio" name="r2" value="tourist" [(ngModel)]="editType"> <br> <br>
+    Address: <input class="form-control w-25"  type="text" [(ngModel)]="editAddress"> <br>
+    Contact: <input class="form-control w-25"  type="text" [(ngModel)]="editContact"> <br>
+    Email: <input class="form-control w-25"  type="text" [(ngModel)]="editEmail"> <br>
+    Profile picture: <input class="form-control w-25"  type="file" (change)="imageToEdit($event)"> <br>  
+    Card: <input class="form-control w-25"  type="text" [(ngModel)]="editCard"> <br>
+
+    <button class="btn btn-light rounded-pill shadow" (click)="back()">BACK</button>
+    <button class="btn btn-light shadow rounded-pill" (click)="editUser()">EDIT USER</button> <br>
+
+    <p class="fw-bold " style="color: red;">{{this.message}}</p> <br>    
+
+</div>
+
+<div *ngIf="this.toReq == true">
+
+    <h2 class="text-center text-light">REQUESTS</h2>
+
+    <div class="text-light" *ngFor="let r of this.allRqst">
+        Username: {{r.username}} <br>
+        Firstname: {{r.firstname}} <br>
+        Lastname: {{r.lastname}} <br>
+        Image : {{r.image}}<br> <br>
+
+        <button class="btn btn-light rounded-pill shadow" 
+        (click)="approve(r.username, r.password, r.firstname, r.lastname, r.gender, r.type, r.address,
+            r.contact, r.email, r.card, r.image)">APPROVE</button>
+            
+        <button class="btn btn-light rounded-pill shadow"
+        (click)="deny(r.username, r.password, r.firstname, r.lastname, r.gender, r.type, r.address,
+            r.contact, r.email, r.card, r.image)">DENY</button> <hr>
+    </div>
+
+    <button class="btn btn-info btn-lg rounded-pill shadow" (click)="back()">BACK</button>
+
+</div>
+
+<app-logoutadmin></app-logoutadmin>
