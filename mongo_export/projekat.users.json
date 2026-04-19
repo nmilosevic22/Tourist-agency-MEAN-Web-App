@@ -1,0 +1,176 @@
+[{
+  "_id": {
+    "$oid": "688352d10898b0436e9a9395"
+  },
+  "username": "nikola123",
+  "password": "Qlnrod6&",
+  "firstname": "Nikola",
+  "lastname": "Milosevic",
+  "gender": "M",
+  "type": "owner",
+  "address": "Knez Mihailova 105",
+  "contact": "0651108788",
+  "email": "milosevicnikola@gmail.com",
+  "image": "default.jpg",
+  "card": "4539636652187479",
+  "valid": true
+},
+{
+  "_id": {
+    "$oid": "6883650736d1ead292f89226"
+  },
+  "username": "sanja123",
+  "password": "Vdqmd4C",
+  "firstname": "Sanja",
+  "lastname": "Obradovic",
+  "gender": "F",
+  "type": "admin",
+  "address": "Bulevar Kralja Aleksandra 120",
+  "contact": "0628574414",
+  "email": "obradovicsanja@gmail.com",
+  "image": "default.jpg",
+  "card": "4321-8784-0589-4676",
+  "valid": true
+},
+{
+  "_id": {
+    "$oid": "6899e68e4a94f184229fb0a2"
+  },
+  "username": "stefan123",
+  "password": "Vwhi6vwhiC",
+  "firstname": "Stefan",
+  "lastname": "Milic",
+  "gender": "M",
+  "type": "owner",
+  "address": "Pop Lukina 52",
+  "contact": "0668859752",
+  "email": "mirkovicstefan@gmail.com",
+  "image": "stef.jpg",
+  "card": "4556885897225498",
+  "valid": true
+},
+{
+  "_id": {
+    "$oid": "6899fcc84a94f184229fb0af"
+  },
+  "username": "lana123",
+  "password": "Odqd6&",
+  "firstname": "Lana ",
+  "lastname": "Mitrovic",
+  "gender": "F",
+  "type": "tourist",
+  "address": "Uzun Mirkova 111",
+  "contact": "0668589552",
+  "email": "mitroviclana@gmail.com",
+  "image": "l.jpg",
+  "card": "301269348544863",
+  "valid": true
+},
+{
+  "_id": {
+    "$oid": "68e444722ff89a09d5f5f86e"
+  },
+  "username": "mika123",
+  "password": "Plnd4C",
+  "firstname": "Mihailo",
+  "lastname": "Mihailovic",
+  "gender": "M",
+  "type": "tourist",
+  "address": "Vladike Nikolaja 12",
+  "contact": "0664454219",
+  "email": "mihailovicmika@gmail.com",
+  "image": "mika2.jpg",
+  "card": "300858874196358",
+  "valid": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68f96ce6077283c21a8be7cd"
+  },
+  "username": "nenad123",
+  "password": "Qhqdg5&",
+  "firstname": "Nenad",
+  "lastname": "Nenadic",
+  "gender": "M",
+  "type": "tourist",
+  "address": "Panticeva 142",
+  "contact": "0682484852",
+  "email": "nenadicnenad@gmail.com",
+  "image": "nenad1.jpeg",
+  "card": "4539555963298521",
+  "valid": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68fe65441e449380a4342604"
+  },
+  "username": "marko123",
+  "password": "Pdunr4C",
+  "firstname": "Marko",
+  "lastname": "Markovic",
+  "gender": "M",
+  "type": "tourist",
+  "address": "Jevrejska 16",
+  "contact": "0668596412",
+  "email": "markovicmarko@gmail.com",
+  "image": "default.jpg",
+  "card": "300254152365764",
+  "valid": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68fe70881e449380a434267c"
+  },
+  "username": "jovan123",
+  "password": "Mrydq6'",
+  "firstname": "Jovan",
+  "lastname": "Jovanovic",
+  "gender": "M",
+  "type": "owner",
+  "address": "Sindjeliceva 93",
+  "contact": "0642256374",
+  "email": "jovanovicjovan@gmail.com",
+  "image": "jovan.png",
+  "card": "4381636785294412",
+  "valid": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ff91f4c76cd1e698aad1cf"
+  },
+  "username": "milos123",
+  "password": "Plorv5C",
+  "firstname": "Milos",
+  "lastname": "Milosevic",
+  "gender": "M",
+  "type": "tourist",
+  "address": "Knez Miloseva 3",
+  "contact": "065223394",
+  "email": "milosevicmilos@gmail.com",
+  "image": "default.jpg",
+  "card": "301254486853684",
+  "valid": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ff94c1c76cd1e698aad1ee"
+  },
+  "username": "bojan123",
+  "password": "Ermdq6C",
+  "firstname": "Bojan",
+  "lastname": "Mitrovic",
+  "gender": "M",
+  "type": "tourist",
+  "address": "Dalmatinska 78",
+  "contact": "0647877213",
+  "email": "mitrovicbojan@gmail.com",
+  "image": "bojan2.png",
+  "card": "4539855214117685",
+  "valid": true,
+  "__v": 0
+}]

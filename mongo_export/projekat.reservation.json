@@ -1,0 +1,154 @@
+[{
+  "_id": {
+    "$oid": "68ff7bad7af77d58762a88ff"
+  },
+  "tourist": "mika123",
+  "price": 156,
+  "people": 2,
+  "start": {
+    "$date": "2025-11-20T23:00:00.000Z"
+  },
+  "end": {
+    "$date": "2025-11-22T23:00:00.000Z"
+  },
+  "name": "Highland",
+  "location": "Zlatibor",
+  "owner": "stefan123",
+  "pending": "waiting",
+  "reserved": {
+    "$date": "2025-10-19T14:03:25.405Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ff7d05c76cd1e698aad10d"
+  },
+  "tourist": "lana123",
+  "price": 30,
+  "people": 2,
+  "start": {
+    "$date": "2025-10-29T23:00:00.000Z"
+  },
+  "end": {
+    "$date": "2025-10-30T23:00:00.000Z"
+  },
+  "name": "boka",
+  "location": "Kopaonik",
+  "owner": "nikola123",
+  "pending": "approved",
+  "reserved": {
+    "$date": "2025-10-27T14:09:09.580Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ff7d46c76cd1e698aad118"
+  },
+  "tourist": "lana123",
+  "price": 455,
+  "people": 3,
+  "start": {
+    "$date": "2025-11-19T23:00:00.000Z"
+  },
+  "end": {
+    "$date": "2025-11-26T23:00:00.000Z"
+  },
+  "name": "radovici house",
+  "location": "Stara Planina",
+  "owner": "stefan123",
+  "pending": "waiting",
+  "reserved": {
+    "$date": "2025-10-10T14:10:14.845Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ff7d57c76cd1e698aad11e"
+  },
+  "tourist": "lana123",
+  "price": 330,
+  "people": 3,
+  "start": {
+    "$date": "2025-12-11T23:00:00.000Z"
+  },
+  "end": {
+    "$date": "2025-12-14T23:00:00.000Z"
+  },
+  "name": "Vila Borova",
+  "location": "Zlatibor",
+  "owner": "stefan123",
+  "pending": "waiting",
+  "reserved": {
+    "$date": "2025-10-23T14:10:31.445Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ff7e97c76cd1e698aad131"
+  },
+  "tourist": "mika123",
+  "price": 260,
+  "people": 2,
+  "start": {
+    "$date": "2025-11-13T23:00:00.000Z"
+  },
+  "end": {
+    "$date": "2025-11-17T23:00:00.000Z"
+  },
+  "name": "radovici house",
+  "location": "Stara Planina",
+  "owner": "stefan123",
+  "pending": "waiting",
+  "reserved": {
+    "$date": "2025-10-01T14:15:51.613Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ff7f32c76cd1e698aad147"
+  },
+  "tourist": "marko123",
+  "price": 455,
+  "people": 4,
+  "start": {
+    "$date": "2025-10-30T23:00:00.000Z"
+  },
+  "end": {
+    "$date": "2025-11-06T23:00:00.000Z"
+  },
+  "name": "Oaza",
+  "location": "Tara",
+  "owner": "nikola123",
+  "pending": "waiting",
+  "reserved": {
+    "$date": "2025-10-22T14:18:26.677Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ff97f4c76cd1e698aad25a"
+  },
+  "tourist": "mika123",
+  "price": 150,
+  "people": 3,
+  "start": {
+    "$date": "2025-10-30T23:00:00.000Z"
+  },
+  "end": {
+    "$date": "2025-11-01T23:00:00.000Z"
+  },
+  "name": "zidine",
+  "location": "Tara",
+  "owner": "nikola123",
+  "pending": "waiting",
+  "reserved": {
+    "$date": "2025-10-20T16:04:04.212Z"
+  },
+  "__v": 0
+}]

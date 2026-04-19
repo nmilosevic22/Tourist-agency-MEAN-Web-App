@@ -1,0 +1,115 @@
+[{
+  "_id": {
+    "$oid": "6899e3514a94f184229fb093"
+  },
+  "name": "bonita",
+  "price": 80,
+  "owner": "nikola123",
+  "location": "Kopaonik",
+  "images": [
+    "bonita1.jpg",
+    "bonita2.jpg",
+    "bonita3.jpg",
+    "bonita4.jpg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6899e4a04a94f184229fb094"
+  },
+  "name": "Highland",
+  "price": 78,
+  "owner": "stefan123",
+  "location": "Zlatibor",
+  "images": [
+    "highland1.jpg",
+    "highland2.jpeg",
+    "highland3.jpeg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6899e7ee4a94f184229fb0a7"
+  },
+  "name": "boka",
+  "price": 30,
+  "owner": "nikola123",
+  "location": "Kopaonik",
+  "images": [
+    "boka1.jpeg",
+    "boka2.jpeg",
+    "boka3.jpeg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6899e82e4a94f184229fb0a8"
+  },
+  "name": "zidine",
+  "price": 75,
+  "owner": "nikola123",
+  "location": "Tara",
+  "images": [
+    "zidine1.jpeg",
+    "zidine2.jpeg",
+    "zidine3.jpeg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6899e8584a94f184229fb0a9"
+  },
+  "name": "radovici house",
+  "price": 65,
+  "owner": "stefan123",
+  "location": "Stara Planina",
+  "images": [
+    "radovici1.jpeg",
+    "radovici2.jpeg",
+    "radovici3.jpeg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "689a13f54a94f184229fb0b6"
+  },
+  "name": "olimp",
+  "price": 90,
+  "owner": "nikola123",
+  "location": "Kopaonik",
+  "images": [
+    "olimp1.jpg",
+    "olimp2.jpeg",
+    "olimp3.jpeg"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68e2cc70c9a9c49a61ddcbc3"
+  },
+  "name": "Vila Borova",
+  "price": 110,
+  "owner": "stefan123",
+  "location": "Zlatibor",
+  "images": [
+    "vilaborova3.jpg",
+    "vilaborova2.jpg",
+    "vilaborova1.jpg"
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68fe2173330584182c940c7a"
+  },
+  "name": "Oaza",
+  "price": 65,
+  "owner": "nikola123",
+  "location": "Tara",
+  "images": [
+    "oaza1.jpeg",
+    "oaza2.jpeg",
+    "oaza3.jpg"
+  ],
+  "__v": 0
+}]

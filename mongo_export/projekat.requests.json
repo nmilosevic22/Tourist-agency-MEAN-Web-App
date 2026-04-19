@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "68f9f7d8ac7772bbc294b429"
+  },
+  "username": "vladimir123",
+  "password": "Yodgd5&",
+  "firstname": "Vladimir",
+  "lastname": "Markovic",
+  "gender": "M",
+  "type": "tourist",
+  "address": "Kisacka 26",
+  "contact": "06614173359",
+  "email": "markovicvlada@gmail.com",
+  "image": "vlada.jpg",
+  "card": "300521485698889",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ff71e3d2c7fdbeae329e67"
+  },
+  "username": "nemanja123",
+  "password": "Qhpdqmd6&",
+  "firstname": "Nemanja",
+  "lastname": "Nemanjic",
+  "gender": "M",
+  "type": "tourist",
+  "address": "Dr Pantica 26b",
+  "contact": "0659637512",
+  "email": "nemanjicnemanja@gmail.com",
+  "card": "5169985943233478",
+  "__v": 0
+}]
